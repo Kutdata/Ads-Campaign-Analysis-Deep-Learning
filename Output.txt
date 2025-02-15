@@ -1,0 +1,107 @@
+# Ads Campaign Performance Analysis
+
+Campaign Data:
+
+| Campaign_ID | Budget | Duration | Platform   | Content_Type | Target_Age | Target_Gender | Region | Clicks | Conversions | CTR        | CPC       | Conversion_Rate | Success |
+|-------------|--------|----------|------------|--------------|------------|----------------|--------|--------|-------------|------------|-----------|-----------------|---------|
+| CAMP-XAJI0Y | 15895  | 39       | Instagram  | Video        | 35-44      | Female         | US     | 48297  | 2116        | 303.85     | 0.329109  | 4.381225        | 1       |
+| CAMP-6DPBHS | 960    | 8        | LinkedIn   | Video        | 45-54      | Female         | UK     | 15097  | 2340        | 1572.60    | 0.063589  | 15.499768       | 1       |
+| CAMP-AHXTHV | 38258  | 54       | YouTube    | Image        | 35-44      | All            | US     | 8134   | 2740        | 21.26      | 4.703467  | 33.685763       | 1       |
+| CAMP-3A3ZMF | 44832  | 28       | Facebook   | Text         | 25-34      | Female         | US     | 21801  | 4277        | 48.63      | 2.056419  | 19.618366       | 1       |
+| CAMP-8MDD4V | 11384  | 36       | Google     | Story        | 18-24      | All            | UK     | 16503  | 1488        | 144.97     | 0.689814  | 9.016542        | 1       |
+
+Summary of Missing Data:
+Campaign_ID        0
+Budget             0
+Duration           0
+Platform           0
+Content_Type       0
+Target_Age         0
+Target_Gender      0
+Region             0
+Clicks             0
+Conversions        0
+CTR                0
+CPC                0
+Conversion_Rate    0
+Success            0
+
+Dataset Overview:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1000 entries, 0 to 999
+Data columns (total 14 columns):
+ #   Column           Non-Null Count  Dtype  
+ ---  ------           --------------  -----  
+  0   Campaign_ID      1000 non-null   object 
+  1   Budget           1000 non-null   int64  
+  2   Duration         1000 non-null   int64  
+  3   Platform         1000 non-null   object 
+  4   Content_Type     1000 non-null   object 
+  5   Target_Age       1000 non-null   object 
+  6   Target_Gender    1000 non-null   object 
+  7   Region           1000 non-null   object 
+  8   Clicks           1000 non-null   int64  
+  9   Conversions      1000 non-null   int64  
+  10  CTR              1000 non-null   float64
+  11  CPC              1000 non-null   float64
+  12  Conversion_Rate  1000 non-null   float64
+  13  Success          1000 non-null   int64  
+
+Dataset Statistics:
+| Metric            | Budget        | Duration       | Clicks      | Conversions | CTR           | CPC        | Conversion_Rate  | Success   |
+|-------------------|---------------|----------------|-------------|-------------|---------------|------------|------------------|-----------|
+| Count             | 1000          | 1000           | 1000        | 1000        | 1000          | 1000       | 1000             | 1000      |
+| Mean              | 24592.14      | 31.69          | 25130.93    | 2480.36     | 388.99        | 2.97       | 26.86            | 0.89      |
+| Std               | 14632.70      | 16.54          | 14205.45    | 1449.47     | 1544.58       | 15.66      | 88.89            | 0.30      |
+| Min               | 109.00        | 3.00           | 98.00       | 13.00       | 0.23          | 0.0032     | 0.0362           | 0         |
+| 25%               | 11480.00      | 17.00          | 13225.25    | 1222.75     | 52.64         | 0.4682     | 4.8897           | 1         |
+| 50%               | 23965.00      | 32.00          | 25013.50    | 2407.00     | 102.21        | 0.9784     | 9.8477           | 1         |
+| 75%               | 37953.75      | 46.00          | 37386.50    | 3771.25     | 213.59        | 1.8999     | 18.7577          | 1         |
+| Max               | 49950.00      | 60.00          | 49820.00    | 4995.00     | 31711.61      | 430.37     | 1554.12          | 1         |
+
+Platform Distribution:
+YouTube    226
+LinkedIn   209
+Instagram  202
+Facebook   193
+Google     170
+
+Content_Type Distribution:
+Story      213
+Image      210
+Carousel   202
+Text       200
+Video      175
+
+Target_Age Distribution:
+35-44    217
+55+      205
+18-24    202
+25-34    192
+45-54    184
+
+Target_Gender Distribution:
+All       346
+Female    337
+Male      317
+
+Region Distribution:
+UK         224
+US         204
+Germany    197
+India      189
+Canada     186
+
+Warnings:
+- `FutureWarning`: A value is trying to be set on a copy of a DataFrame or Series through chained assignment.
+- `UserWarning`: Do not pass an `input_shape`/`input_dim` argument to a layer in Keras when using Sequential models.
+
+Model Training Results:
+Epoch 1/40: Accuracy: 10.89%, Loss: 0.8150
+Epoch 2/40: Accuracy: 58.76%, Loss: 0.6894
+...
+Epoch 40/40: Accuracy: 99.33%, Loss: 0.0215
+
+🚀 Results:
+Accuracy: 0.9500
+ROC-AUC Score: 0.9761
